@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单列表动画</title>
+    <link rel="stylesheet" href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body,
+        ul,
+        li,
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .menu-wrap {
+            height: 252px;
+            width: 200px;
+            background-color: #c2bfd2;
+            margin: 100px auto;
+            border: 1px solid #c2bfd2;
+            font-size: 18px;
+            overflow: hidden;
+        }
+
+        .menu-wrap .menu-list .item-list {
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+
+        .menu-wrap .menu-list .item-list:hover {
+            background-color: #fff;
+        }
+
+        .menu-wrap .item-list .item-list-order {
+            text-align: center;
+            line-height: 50px;
+            left: -160px;
+            position: absolute;
+            -webkit-animation: move 2s ease-in-out forwards;
+            transition: all .3s;
+            /* -webkit-animation-delay: 0.5s; */
+        }
+
+        /* 这边延迟动画的选择选择器不能加上.item-list-order*/
+        .menu-wrap .item-list .item-list-order-1 {
+            -webkit-animation-delay: 1s;
+        }
+
+        .menu-wrap .item-list .item-list-order-2 {
+            -webkit-animation-delay: 0.8s;
+        }
+
+        .menu-wrap .item-list .item-list-order-3 {
+            -webkit-animation-delay: 0.6s;
+        }
+
+        .menu-wrap .item-list .item-list-order-4 {
+            -webkit-animation-delay: 0.4s;
+        }
+
+        .menu-wrap .item-list .item-list-order-5 {
+            -webkit-animation-delay: 0.2s;
+        }
+
+        .menu-wrap .fa {
+            position: absolute;
+            right: 3px;
+            line-height: 50px;
+            color: #6f153c;
+        }
+
+        @keyframes move {
+            0% {
+                left: -160px;
+                color: #fff;
+                font-size: 16px;
+            }
+
+            25% {
+                left: 45px;
+                color: #4c5a7d;
+                font-size: 16px;
+            }
+
+            50% {
+                left: 15px;
+                color: #fff;
+                font-size: 18px;
+            }
+
+            75% {
+                left: 75px;
+                color: #4c5a7d;
+                font-size: 20px;
+            }
+
+            100% {
+                left: 15px;
+                color: #6f153c;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-wrap">
+        <ul class="menu-list">
+            <li class="item-list">
+                <a class="item-list-order item-list-order-1">流浪地球</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item-list">
+                <a class="item-list-order item-list-order-2">战狼2</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item-list">
+                <a class="item-list-order item-list-order-3">复仇者联盟4</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item-list">
+                <a class="item-list-order item-list-order-4">钢铁侠3</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item-list">
+                <a class="item-list-order item-list-order-5">三体</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

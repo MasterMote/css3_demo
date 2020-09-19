@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技名片</title>
+    <style>
+        body {
+            background-color: #252a30;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .card {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            box-shadow: 0 0 3px #b1db56;
+            margin: 300px auto;
+            cursor: pointer;
+            transition: box-shadow 0.5s;
+        }
+
+        .card div {
+            float: left;
+        }
+
+        .card .line {
+            display: block;
+            position: absolute;
+            color: #b1db56;
+        }
+
+        .card .line.line-bottom,
+        .card .line.line-top {
+            height: 0;
+            width: 0;
+        }
+
+        .card .line.line-bottom {
+            right: -150px;
+            bottom: 0;
+            border: 1px solid rgba(177, 219, 86, 0);
+            transition: all 0.3s;
+        }
+
+        .card .line.line-top {
+            left: -150px;
+            top: 0;
+            border: 1px solid rgba(177, 219, 86, 0);
+            transition: all 0.3s;
+        }
+
+        .card .line.line-left,
+        .card .line.line-right {
+            height: 0;
+            width: 0;
+        }
+
+        .card .line.line-left {
+            bottom: -150px;
+            left: 0;
+            border: 1px solid rgba(177, 219, 86, 0);
+            transition: all 0.3s;
+        }
+
+        .card .line.line-right {
+            top: -150px;
+            right: 0;
+            border: 1px solid rgba(177, 219, 86, 0);
+            transition: all 0.3s;
+        }
+
+        .card .img-box {
+            height: 200px;
+            width: 200px;
+            box-sizing: border-box;
+            transition: all .2s ease-in-out;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .card .img-box img {
+            transition: transform .5s;
+        }
+
+        .card .card-text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+        }
+
+        .card .card-text h2,
+        h3 {
+            color: #b1db56;
+        }
+
+        .card .card-text p {
+            color: #ccc;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 15px #b1db56;
+        }
+
+        .card:hover .img-box img {
+            transform: rotate(360deg);
+        }
+
+        .card:hover .line.line-top {
+            left: 0;
+            width: 398px;
+            border: 1px solid rgba(177, 219, 86, 1);
+        }
+
+        .card:hover .line.line-bottom {
+            right: 0;
+            width: 398px;
+            border: 1px solid rgba(177, 219, 86, 1);
+        }
+
+        .card:hover .line.line-left {
+            top: 0;
+            height: 198px;
+            border: 1px solid rgba(177, 219, 86, 1);
+        }
+
+        .card:hover .line.line-right {
+            top: 0;
+            height: 198px;
+            border: 1px solid rgba(177, 219, 86, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+        <div class="img-box">
+            <img src="./img/rocket.png">
+        </div>
+        <div class="card-text">
+            <h2>一个科技的时代</h2>
+            <h3>- 需要科技感 -</h3>
+            <p>我们需要科技</p>
+            <p>科技展望未来</p>
+        </div>
+    </div>
+</body>
+
+</html>
